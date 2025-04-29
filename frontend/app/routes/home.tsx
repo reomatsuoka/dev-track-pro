@@ -1,13 +1,20 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Link } from "react-router"
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
+    { title: "Dev Track Pro" },
     { name: "description", content: "Welcome to React Router!" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <>
+      <div className="flex-1 sm:ml-64">Homeだよ</div>
+      <Link to="/sample">
+        <button>サンプルはこちら</button>
+      </Link>
+    </>
+  )
 }
